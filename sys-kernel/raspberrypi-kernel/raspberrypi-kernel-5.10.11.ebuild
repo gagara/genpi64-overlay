@@ -57,3 +57,8 @@ src_prepare() {
     default
 }
 
+# Override function from kernel-install eclass to skip checking of kernel.release file(s).
+pkg_preinst() {
+	debug-print-function ${FUNCNAME} "${@}"
+}
+
